@@ -2,11 +2,20 @@
 body {
   margin: 2em;
   background-color: grey;
-  color: red;
+  color: white
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-size: 18px;
 }
 
 h1 {
   text-align: center;
+}
+
+.topinterfacecontainer {
+  display: grid;
+  margin: 1em;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
 }
 
 .gridcontainer {
@@ -31,10 +40,15 @@ h1 {
     transition: background-color 300ms 20ms ease-in-out;*/
 }
 
-.box:hover {
-
+.topmessage {
+  color: white;
+  text-align: center;
 }
 
+.resetgame {
+  color: white;
+  text-align: center;
+}
 
 
 /*.blackBox {
