@@ -1,20 +1,27 @@
 
 body {
   margin: 2em;
-  background-color: grey;
-  color: white
-  font-family: 'ZCOOL QingKe HuangYou', cursive;
-  font-size: 18px;
+  background-color: white;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 20px;
 }
 
 h1 {
   text-align: center;
 }
 
+span {
+  display: inline-block;
+ vertical-align: middle;
+ line-height: normal;
+}
+
 .topinterfacecontainer {
   display: grid;
-  margin: 1em;
-  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1em;
+  margin-top: -1em;
+  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   grid-template-rows: 1fr;
 }
 
@@ -22,13 +29,16 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
+  margin: auto;
   grid-gap: 0em;
-  width: 100%;
-  height: 100%;
+  align-self: stretch;
+  width: minmax(200px, 50%);
+  height: minmax(200px, 50%);
 }
 
 .box {
-  min-height: 200px;
+  height: 30vh;
+  line-height: 28vh;
   text-align: center;
   /*color: black;
     -webkit-transition: color 300ms ease-in-out;
@@ -41,13 +51,31 @@ h1 {
 }
 
 .topmessage {
-  color: white;
-  text-align: center;
+  grid-column: 1 / span 1;
+  color: black;
+  font-weight: bolder;
+  text-align: left;
+}
+
+.redcounter {
+  grid-column: 2 / span 1;
+  text-align: right;
+  font-weight: bolder;
+  color: #FF4136
+}
+
+.bluecounter {
+  grid-column: 3 / span 1;
+  text-align: left;
+  font-weight: bolder;
+  color: #0074D9
 }
 
 .resetgame {
-  color: white;
-  text-align: center;
+  grid-column: 4 / span 1;
+  color: black;
+  font-weight: bolder;
+  text-align: right;
 }
 
 
