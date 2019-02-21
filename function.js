@@ -13,7 +13,7 @@ function tileIsClicked(elementId) {
 
 function resetTiles() {
   tileArrForReset.forEach(tile => {
-  document.getElementById(tile).style.backgroundColor = "black";
+  document.getElementById(tile).style.backgroundColor = "#DDDDDD";
   });
   tileArr = [0, 0, 0, 0, 0, 0, 0, 0, 0];
   console.log(tileArr);
