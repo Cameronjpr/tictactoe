@@ -5,48 +5,56 @@
   <title>test</title>
 
   <link type:"text/css" rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
   <script type="text/javascript" src="function.js"></script>
+  <script type="text/javascript" src="victory-condition-checker.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 
-<body>
-  <div class="topInterfaceContainer">
-    <div class="topmessage" id="topmessage">
-      Place a tile to begin!
+<body scroll="no" style="overflow: hidden">
+    <div class="topinterfacecontainer">
+      <div class="topmessage" id="topmessage">
+        Place a tile to begin!
+      </div>
+      <div class="redcounter" id="redwincount">
+        0
+      </div>
+      <div class="bluecounter" id="bluewincount">
+        0
+      </div>
+      <div class="resetgame" id="resetgame" onclick="resetTiles()">
+        RESET GAME
+      </div>
     </div>
-    <div class="resetgame" id="resetgame" onclick="resetTiles()">
-      RESET GAME
+    <!-- This is a grid which contains all the tiles as divs -->
+    <div class="gridcontainer">
+      <div class="box" id="1" onclick="tileIsClicked(this.id)">
+        <span></span>
+      </div>
+      <div class="box" id="2" onclick="tileIsClicked(this.id)">
+        <span></span>
+      </div>
+      <div class="box" id="3" onclick="tileIsClicked(this.id)">
+        <span></span>
+      </div>
+      <div class="box" id="4" onclick="tileIsClicked(this.id)">
+        <span></span>
+      </div>
+      <div class="box" id="5" onclick="tileIsClicked(this.id)">
+        <span></span>
+      </div>
+      <div class="box" id="6" onclick="tileIsClicked(this.id)">
+        <span></span>
+      </div>
+      <div class="box" id="7" onclick="tileIsClicked(this.id)">
+        <span></span>
+      </div>
+      <div class="box" id="8" onclick="tileIsClicked(this.id)">
+        <span></span>
+      </div>
+      <div class="box" id="9" onclick="tileIsClicked(this.id)">
+        <span></span>
     </div>
-  </div>
-  <div class="gridcontainer">
-    <div class="box" id="1" onclick="tileIsClicked(this.id)">
-      <span>1</span>
-    </div>
-    <div class="box" id="2" onclick="tileIsClicked(this.id)">
-      <span>2</span>
-    </div>
-    <div class="box" id="3" onclick="tileIsClicked(this.id)">
-      <span>3</span>
-    </div>
-    <div class="box" id="4" onclick="tileIsClicked(this.id)">
-      <span>4</span>
-    </div>
-    <div class="box" id="5" onclick="tileIsClicked(this.id)">
-      <span>5</span>
-    </div>
-    <div class="box" id="6" onclick="tileIsClicked(this.id)">
-      <span>6</span>
-    </div>
-    <div class="box" id="7" onclick="tileIsClicked(this.id)">
-      <span>7</span>
-    </div>
-    <div class="box" id="8" onclick="tileIsClicked(this.id)">
-      <span>8</span>
-    </div>
-    <div class="box" id="9" onclick="tileIsClicked(this.id)">
-      <span>9</span>
-  </div>
 </div>
 
 </body>
