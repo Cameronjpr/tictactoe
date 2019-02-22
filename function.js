@@ -13,7 +13,10 @@ function tileIsClicked(elementId) {
 
 function resetTiles() {
   tileArrForReset.forEach(tile => {
-  document.getElementById(tile).style.backgroundColor = "#DDDDDD";
+    // this reset of background color seems to break the fade feature
+  document.getElementById(tile).classList.remove("box");
+  document.getElementById(tile).classList.remove("redhover", "bluehover", "boxred", "boxblue");
+  document.getElementById(tile).classList.add("box");
   });
   tileArr = [0, 0, 0, 0, 0, 0, 0, 0, 0];
   console.log(tileArr);
@@ -55,7 +58,9 @@ function changeColor(elementId) {
   if (tileArr[i] === 0 && turnCounter === 0 && gameIsWon === false) {
     tileArr[i] = 1;
     // console.log("Tile number "(i + 1).toString() + " was changed.")
-    div.style.backgroundColor = "#FF4136";
+    div.classList.remove("box");
+    div.classList.remove("redhover");
+    div.classList.add("boxred");
     document.getElementById('topmessage').style.color = "#0074D9"
     document.getElementById('topmessage').innerHTML = "Blue's turn..."
     turnDisplay()
@@ -63,7 +68,9 @@ function changeColor(elementId) {
   else if (tileArr[i] === 0 && turnCounter === 1 && gameIsWon === false) {
     tileArr[i] = 10;
     // console.log("Tile number "(i + 1).toString() + " was changed.")
-    div.style.backgroundColor = "#0074D9";
+    div.classList.remove("box");
+    div.classList.remove("bluehover");
+    div.classList.add("boxblue");
     document.getElementById('topmessage').style.color = "#FF4136"
     document.getElementById('topmessage').innerHTML = "Red's turn..."
     turnDisplay()
@@ -109,7 +116,8 @@ function playerBlueWins() {
 
 function paintTheBoardRed() {
   tileArrForReset.forEach(tile => {
-  document.getElementById(tile).style.backgroundColor = "#FF4136";
+  document.getElementById(tile).classList.add("boxred");
+  document.getElementById(tile).classList.remove("boxblue");
   });
   document.getElementById('topmessage').style.color = "black"
   document.getElementById('topmessage').innerHTML = "Well done, Red!"
@@ -117,7 +125,8 @@ function paintTheBoardRed() {
 
 function paintTheBoardBlue() {
   tileArrForReset.forEach(tile => {
-  document.getElementById(tile).style.backgroundColor = "#0074D9";
+  document.getElementById(tile).classList.add("boxblue");
+  document.getElementById(tile).classList.remove("boxred");
   });
   document.getElementById('topmessage').style.color = "black"
   document.getElementById('topmessage').innerHTML = "Well done, Blue!"

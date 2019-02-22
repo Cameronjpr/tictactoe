@@ -47,6 +47,20 @@ span {
   background-color: #DDDDDD;
 }
 
+.boxred {
+  height: 28vh;
+  min-width: 100px;
+  text-align: center;
+  background-color: #FF4136
+}
+
+.boxblue {
+  height: 28vh;
+  min-width: 100px;
+  text-align: center;
+  background-color: #0074D9
+}
+
 .topmessage {
   grid-column: 1 / span 1;
   color: black;
