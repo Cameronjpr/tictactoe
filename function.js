@@ -18,9 +18,20 @@ function resetTiles() {
   tileArr = [0, 0, 0, 0, 0, 0, 0, 0, 0];
   console.log(tileArr);
   console.log("It's a new game. Enjoy!");
-  document.getElementById('topmessage').style.color = "black";
-  document.getElementById('topmessage').innerHTML = "Place a tile to begin!";
+  playerToStart();
   gameIsWon = false;
+}
+
+function playerToStart() {
+  if (turnCounter === 1) {
+    document.getElementById('topmessage').style.color = "#0074D9"
+    document.getElementById('topmessage').innerHTML = "Blue goes first..."
+  }
+  else if (turnCounter === 0) {
+    console.log("Red goes first...");
+    document.getElementById('topmessage').style.color = "#FF4136"
+    document.getElementById('topmessage').innerHTML = "Red goes first..."
+  }
 }
 
 function turnDisplay() {
@@ -110,4 +121,25 @@ function paintTheBoardBlue() {
   });
   document.getElementById('topmessage').style.color = "black"
   document.getElementById('topmessage').innerHTML = "Well done, Blue!"
+}
+
+function hoverColorActive(id) {
+   let hoveredTile = document.getElementById(id);
+   if (turnCounter === 0) {
+     hoveredTile.classList.add("redhover");
+   }
+   else if (turnCounter === 1) {
+     hoveredTile.classList.add("bluehover");
+   }
+}
+
+
+function hoverColorInactive(id) {
+   let hoveredTile = document.getElementById(id);
+   if (turnCounter === 0) {
+     hoveredTile.classList.remove("redhover");
+   }
+   else if (turnCounter === 1) {
+     hoveredTile.classList.remove("bluehover");
+   }
 }

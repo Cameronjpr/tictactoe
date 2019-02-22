@@ -1,9 +1,14 @@
 
 body {
-  margin: 2em;
+  margin-left: 10%;
+  margin-right: 10%;
   background-color: white;
   font-family: 'Varela Round', sans-serif;
   font-size: 20px;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 
 h1 {
@@ -18,25 +23,26 @@ span {
 
 .topinterfacecontainer {
   display: grid;
-  margin-bottom: 1em;
-  margin-top: -1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   grid-gap: 1em;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(50px, 2fr));
   grid-template-rows: 1fr;
+  align-self: stretch;
 }
 
 .gridcontainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  margin: auto;
   align-self: stretch;
-  width: 50vw;
+  min-width: 100px;
   height: 80vh;
 }
 
 .box {
   height: 28vh;
+  min-width: 100px;
   text-align: center;
   background-color: #DDDDDD;
 }
@@ -67,4 +73,20 @@ span {
   color: black;
   font-weight: bolder;
   text-align: right;
+}
+
+.redhover {
+  background-color: #ffb7b3;
+  -moz-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.bluehover {
+  background-color: #b3dbff;
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
 }
