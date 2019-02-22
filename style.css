@@ -30,24 +30,15 @@ span {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   margin: auto;
-  grid-gap: 0em;
   align-self: stretch;
-  width: minmax(200px, 50%);
-  height: minmax(200px, 50%);
+  width: 50vw;
+  height: 80vh;
 }
 
 .box {
-  height: 30vh;
-  line-height: 28vh;
+  height: 28vh;
   text-align: center;
-  /*color: black;
-    -webkit-transition: color 300ms ease-in-out;
-    -ms-transition: color 300ms ease-in-out;
-    transition: color 300ms ease-in-out;*/
-  background-color: black;
-    /*-webkit-transition: background-color 300ms 20ms ease-in-out;
-    -ms-transition: background-color 300ms 20ms ease-in-out;
-    transition: background-color 300ms 20ms ease-in-out;*/
+  background-color: #DDDDDD;
 }
 
 .topmessage {
@@ -76,18 +67,4 @@ span {
   color: black;
   font-weight: bolder;
   text-align: right;
-}
-
-
-/*.blackBox {
-  background-color: black
-}
-
-.whiteBox {
-  background-color: white
-}*/
-
-@@keyframes fader {
-  from {color: black;}
-  to {color: white;;}
 }
