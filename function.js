@@ -18,9 +18,20 @@ function resetTiles() {
   tileArr = [0, 0, 0, 0, 0, 0, 0, 0, 0];
   console.log(tileArr);
   console.log("It's a new game. Enjoy!");
-  document.getElementById('topmessage').style.color = "black";
-  document.getElementById('topmessage').innerHTML = "Place a tile to begin!";
+  playerToStart();
   gameIsWon = false;
+}
+
+function playerToStart() {
+  if (turnCounter === 1) {
+    document.getElementById('topmessage').style.color = "#0074D9"
+    document.getElementById('topmessage').innerHTML = "Blue goes first..."
+  }
+  else if (turnCounter === 0) {
+    console.log("Red goes first...");
+    document.getElementById('topmessage').style.color = "#FF4136"
+    document.getElementById('topmessage').innerHTML = "Red goes first..."
+  }
 }
 
 function turnDisplay() {
